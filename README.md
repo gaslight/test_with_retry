@@ -13,7 +13,7 @@ by adding `retry_failed_tests` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:retry_failed_tests, "~> 0.1.0"}
+    {:test_with_retry, "~> 0.1.0"}
   ]
 end
 ```
