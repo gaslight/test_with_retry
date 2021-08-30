@@ -8,7 +8,7 @@ return an exit code of 1 so that CI can report failures appropriately.
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `retry_failed_tests` to your list of dependencies in `mix.exs`:
+by adding `test_with_retry` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
