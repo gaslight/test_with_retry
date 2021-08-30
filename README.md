@@ -1,4 +1,4 @@
-# RetryFailedTests
+# TestWithRetry
 
 This project provides a mix task to retry failed tests. It accepts the same command line
 arguments as `mix test`. If failures are encountered on the first test run, it will do another
