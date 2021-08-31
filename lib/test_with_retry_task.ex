@@ -15,7 +15,9 @@ defmodule Mix.Tasks.TestWithRetry do
 
       {output, _} ->
         IO.puts(output)
-        unless output =~ ~R/CompileError/ do
+        if output =~ ~R/compilation error/i do
+          exit(1)
+        else
           IO.puts("Rerunning failed tests...")
           retry(args)
         end
