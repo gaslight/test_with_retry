@@ -9,13 +9,16 @@ defmodule Mix.Tasks.TestWithRetry do
   """
 
   def run(args) do
-    case System.cmd("mix", ["test"] ++ args, into: IO.stream(:stdio, :line)) do
-      {_output, 0} ->
-        nil
+    case System.cmd("mix", ["test"] ++ args) do
+      {output, 0} ->
+        IO.puts(output)
 
-      {_, _} ->
-        IO.puts("Rerunning failed tests...")
-        retry(args)
+      {output, _} ->
+        IO.puts(output)
+        unless output =~ ~R/CompileError/ do
+          IO.puts("Rerunning failed tests...")
+          retry(args)
+        end
     end
   end
 

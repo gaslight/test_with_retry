@@ -5,7 +5,7 @@ defmodule TestWithRetry.MixProject do
     [
       app: :test_with_retry,
       description: "A mix task to automatically retry any failed tests. Takes same args as mix test. Reports failures on second run.",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),

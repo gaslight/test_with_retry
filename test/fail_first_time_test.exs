@@ -1,6 +1,5 @@
 defmodule RetryFailedTestsTest do
   use ExUnit.Case
-  doctest TestWithRetry
 
   test "fail every other time" do
     fixture_file = Path.join([__DIR__, "schrodinger.txt"])
